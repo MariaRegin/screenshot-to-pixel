@@ -18,7 +18,7 @@ export function cueFor(position: Position, blocks: Block[]) {
   const current = blocks[position.block];
   return {
     downbeat: position.beat === 1,
-    transition: Boolean(current && position.beat === current.numerator && position.bar === current.bars),
+    transition: Boolean(current && position.block > 0 && position.bar === 1 && position.beat === 1),
     cycle: position.block === 0 && position.bar === 1 && position.beat === 1 && position.cycle > 1,
   };
 }
