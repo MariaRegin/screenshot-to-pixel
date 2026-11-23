@@ -28,3 +28,8 @@ use the editor.
   own key and store it in Secrets.
 - **Secrets.** Lovable manages them. Do not put secret values in the repo.
 <!-- LOVABLE:END -->
+
+## Application architecture
+- Keep rhythm math in a browser-safe pure module and audio scheduling in a client-invoked hook, so timing rules are testable and SSR never creates an AudioContext.
+- Store custom forms in browser local storage as explicitly requested; validate restored forms before using them in the audio engine.
+- Keep visual styles and semantic color tokens in the global stylesheet; use the shared Button and Switch controls for the practice workspace.
